@@ -14,7 +14,8 @@
  * @return unknown
  */
 function got_mod_rewrite() {
-	$got_rewrite = apache_mod_loaded('mod_rewrite', true);
+	$got_rewrite = true;
+//	$got_rewrite = apache_mod_loaded('mod_rewrite', true);
 	return apply_filters('got_rewrite', $got_rewrite);
 }
 
