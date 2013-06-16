@@ -14,11 +14,16 @@
 					<!-- Site Tagline -->
 				<?php } else { ?>
 					<?php if(of_get_option('logo_url') == ''){ ?>
-					<a href="<?php echo home_url(); ?>/" class="logo_h logo_h__img"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('description'); ?>"></a>
+					<a href="<?php echo home_url(); ?>/" class="logo_h logo_h__img"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('description'); ?>">
+                                            <h1 ><?php echo bloginfo('name'); ?></h1>
+                                        </a>
 					<?php } else { ?>
-					<a href="<?php echo home_url(); ?>/" class="logo_h logo_h__img"><img src="<?php echo of_get_option('logo_url', "" ); ?>" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('description'); ?>"></a>
+					<a href="<?php echo home_url(); ?>/" class="logo_h logo_h__img"><img src="<?php echo of_get_option('logo_url', "" ); ?>" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('description'); ?>">
+                                            <h1 ><?php echo bloginfo('name'); ?></h1>
+                                        </a>
 					<?php }?>
 				<?php }?>
+                                
 			</div>
 			<!-- END LOGO -->
 			
@@ -27,7 +32,7 @@
 	</header>
 	
 	<?php if( is_front_page() ) { ?>
-		<div id="slider-wrapper" class="slider">
+		<div id="slider-wrapper" class="slider" style="display: none;">
 			<div class="container">
 				<?php get_template_part('slider'); ?>
 			</div>

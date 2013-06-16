@@ -50,6 +50,7 @@
  
 <div id="camera" class="camera_wrap">
     <?php
+ /*
         query_posts("post_type=slider&posts_per_page=-1&post_status=publish&orderby=name&order=ASC");
         while ( have_posts() ) : the_post();
     
@@ -61,7 +62,6 @@
         $banner_animation = of_get_option('sl_banner');
     
         if(has_post_thumbnail( $the_ID)){
- 
         echo "<div ";
             if($url!=""){
                 echo "data-src='";
@@ -88,8 +88,9 @@
                 <?php }
                 }
         echo "</div>";
- 
         }
     endwhile;
-    wp_reset_query(); ?>
+    wp_reset_query(); 
+ */
+  ?>
 </div>
